@@ -13,7 +13,7 @@
     // NCMB アクセスの準備
     let ncmb = new NCMB(appKey, clientKey);
     // 本アプリで使うクラスの指定。const は定数の宣言。変更できない変数と思えば良い。
-    const db = "m";
+    const db = "FGO";
 
     function fetchAll() {
       let TestDataClass = ncmb.DataStore(db);
@@ -63,14 +63,15 @@
 
     function showResults(results) {
       // テーブルのヘッダを生成
-      let msg = "<table><tr><th>name</th><th>Lvl</th><th>attack</th><th>defence</th></tr>";
+      let msg = "<table><tr><th>name</th><th>level</th><th>HP</th><th>ATK</th><th>COST</th></tr>";
       for (let i = 0; i < results.length; i++) {
         // 各データを収めた表の列を生成
         msg += "<tr>";
         msg += "<td>" + results[i].name + "</td>";
         msg += "<td class='num'>" + results[i].level + "</td>";
-        msg += "<td class='num'>" + results[i].attack + "</td>";
-        msg += "<td class='num'>" + results[i].defence + "</td>";
+        msg += "<td class='num'>" + results[i].HP + "</td>";
+        msg += "<td class='num'>" + results[i].ATK + "</td>";
+        msg += "<td class='num'>" + results[i].COST + "</td>";
         msg += "</tr>";
       }
       // テーブルのテイラを生成
