@@ -1,9 +1,9 @@
 /**/
 body {
-  background-color: aqua;
+  background-color: rgba(0, 255, 68, 0.629);
 }
 h1 {
-  background-color: yellow;
+  background-color: rgb(255, 64, 0);
 }
 
 label {
@@ -28,7 +28,7 @@ input {
   height: 4ex;
   width: 5em;
   border-radius: 10px;
-  color: white;
+  color: rgb(238, 235, 34);
   background-color: blue;
 }
 
